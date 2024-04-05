@@ -32,11 +32,11 @@ A lightweight web app that allows you to stream live video from your webcam to t
 ## Notes
 
 - The app was tested on **Ubuntu 22.04.4 LTS server**.
-- `log.db` should be created in the app directory after the very first run.
+- `log.db` should be created in the same directory as `app.py` after the very first run.
 - The app uses Flask's development server which is not suitable for production. However, it works fine for personal use by one user.
 - The app can handle one stream at a time. Handling simultaneous streams requires the use of a full-fledged server like Apache. Also, the video source of your device (the camera) might not be able to handle multiple read requests at the same time.
-- Currently, the app doesn't support streaming audio. A future update may include this functionality probably by using a python libraries like `pyaudio` or `sounddevice`.
+- Currently, the app doesn't support streaming audio. A future update may include this functionality, probably by using python libraries like `pyaudio` or `sounddevice`.
 
 ## External access:
 
-You can combine this app with a setup that allows you to access your local network from outside. **Wiregard** private VPN is a good solution. It provides secure connection to your local network through an encrypted tunnel. This combination was tested with this app, and it allowed accessing the video stream from outside successfully.
+You can combine this app with a setup that allows you to access your local network from outside. **Wireguard** private VPN is a good solution. It provides secure connection to your local network through an encrypted tunnel. This combination was tested with this app, and it allowed successful access to the video stream from outside the local network.
