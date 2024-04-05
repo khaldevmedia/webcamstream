@@ -1,0 +1,17 @@
+# Logs
+*.log
+# Database
+*.db
+
+__pycache__/
+venv/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

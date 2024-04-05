@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Webcam Live Stream</title>
+    <link
+      href="{{ url_for('static', filename='css/style.css') }}"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <center>
+      <div>
+        <h1>Live stream from location</h1>
+        <p>Your current time: <span id="time-span"></span></p>
+        <p>Location date and time whan the streaming started:</p>
+        <p>{{ args['date'] }} <span>{{ args['time'] }}</span></p>
+        <img src="{{ url_for('video_feed') }}" />
+      </div>
+    </center>
+    <script>
+      var span = document.getElementById("time-span");
+
+      function time() {
+        var d = new Date();
+        var s = d.getSeconds();
+        var m = d.getMinutes();
+        var h = d.getHours();
+        span.textContent =
+          ("0" + h).substr(-2) +
+          ":" +
+          ("0" + m).substr(-2) +
+          ":" +
+          ("0" + s).substr(-2);
+      }
+
+      setInterval(time, 1000);
+    </script>
+  </body>
+</html>

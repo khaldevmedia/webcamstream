@@ -1,0 +1,71 @@
+body {
+  font-family: arial, sans-serif;
+  background: #212121;
+}
+
+
+
+h1, h2, p, span {
+  color: #cccccc;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	width: 50%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse; 
+  color: #cccccc;
+  width: 50%;
+  
+}
+
+th {
+	text-align: left;
+	color: #e6e6e6;
+	background-color: #737373;
+}
+
+
+tr:nth-child(odd) {
+  background-color: #404040;
+}
+
+#table-headder{
+	font-weight: bold;
+}
+
+
+#date, #time, #ip{
+	font-weight: bold;
+	color: #00aaff;
+}
+
+
+@media only screen and (hover: none) and (pointer: coarse){
+	body {
+	  background: #000000;
+	}
+	
+	table {
+	  width: 100%;
+	}
+	
+	h1, p, span {
+	  color: #cfcfcf;
+	}
+	
+	img{
+		width: 100%;
+	}
+}
+
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Log of stream requests</title>
+		<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+	</head>
+	<body>
+		<center>
+			<div>
+				<h1>Log of previous stream requests </h1>
+				<table>
+					<tr>
+						<th>ID</th>
+						<th>User's IP</th>
+						<th>Date</th>
+						<th>Time</th>
+					</tr>	
+					{% for log in logs %}
+					<tr>
+						<td>{{ log[0] }}</th>
+						<td>{{ log[1] }}</th>
+						<td>{{ log[2].split()[0] }}</th> 
+						<td>{{ log[2].split()[1] }}</th> 
+					</tr>
+					{% endfor %}
+				</table>
+			</div>
+		</center>
+	</body>
+</html>
