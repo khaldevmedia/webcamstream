@@ -90,9 +90,9 @@ def ips():
     logger = Logger("log.db")
     user_ips = logger.get_unique_ips()
 
-    # Having this object will allow to detect if an unknown IP suaccessfully connected to the stream
+    # Using this object allows to detect if an unknown IP has suaccessfully connected to the stream
     KNOWN_IPS = {
-        # List your known IPs here as objects like this:
+        # Replace these IP objects with your known IPs
         '192.168.1.10': 'main-pc',
         '192.168.1.11': 'phone',
     }
