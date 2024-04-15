@@ -1,7 +1,3 @@
-# CV2 Tutorial:
-# https://www.youtube.com/watch?v=-4v4A550K3w
-# --------------------------------------------
-
 # Installed libraries
 from flask import Flask, render_template, Response, request
 
